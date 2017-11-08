@@ -47,6 +47,25 @@ while not valid_input:
 print("Successfully entered an integer.")
 </code></pre>
 
+        <h4>Creating Custom Types of Errors</h4>
+        <p>In addition to using the built-in types, we can also define our own custom types of errors. See the <a href="https://docs.python.org/3/tutorial/errors.html#user-defined-exceptions" target="_blank">official Python documentation</a> for an example of how to do this, but in short, assuming we wanted to create an exception class for a InvalidStudentError, the Python could would look as follows:</p>
+
+<pre><code class="python">
+class InvalidStudentError(Exception):
+    def __init__(self, message):
+        # Don't forget to pass the message to the base class
+        super().__init__(message)
+
+</code></pre>
+
+Then we could use our new InvalidStudentError, just like any other error:
+
+<pre><code class="python">
+if student.name == None:
+    raise InvalidStudentError("The student must have a name")
+
+</code></pre>
+
 
        <script src="../course/js/highlight/highlight.pack.js"></script>
        <script>hljs.initHighlightingOnLoad();</script>
