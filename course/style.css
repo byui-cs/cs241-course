@@ -349,3 +349,10 @@ p.subtitle {
 	margin-top: -30px;
 	color: #0F6CB6;
 }
+
+.img-tutorial {
+	border: 0;
+	display:block;
+	margin-left: auto;
+	margin-right: auto;
+}
