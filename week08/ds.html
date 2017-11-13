@@ -154,10 +154,81 @@
         <p>Follow these steps to guide you through the process:</p>
 
         <ol>
-            <li><p>Begin with the <a href="http://github.com/byui-cs/cs241-course/week08/trees.py" target="_blank">the following starter code</a>. It defines a TreeNode class, and constructs a simple binary search tree for you.</p></li>
+            <li><p>Begin with the following starter code. It defines a TreeNode class, and constructs a simple binary search tree for you.</p></li>
+
+<pre><code class="bash">
+# For this assignment, you just need to implement the print_tree() function
+
+class TreeNode:
+    """
+    This class holds a basic binary tree node
+    For this assignment, you should not need to change the class.
+    """
+    def __init__(self, data=""):
+        self.data = data
+        self.left = None
+        self.right = None
+
+def construct_tree():
+    """
+    This function constructs a simple balanced binary search tree.
+    Normally, we would add functions to our tree to be able to automatically insert
+    the values into the correct places, but for this assignment, this
+    function will simply construct it manually.
+    :return:
+    """
+
+    # You should not need to change anything here
+    root = TreeNode("50")
+
+    root.left = TreeNode("26")
+
+    root.left.left = TreeNode("12")
+    root.left.left.left = TreeNode("8")
+    root.left.left.right = TreeNode("16")
+
+    root.left.right = TreeNode("43")
+    root.left.right.left = TreeNode("34")
+    root.left.right.right = TreeNode("46")
+
+    root.right = TreeNode("83")
+
+    root.right.left = TreeNode("59")
+    root.right.left.left = TreeNode("56")
+    root.right.left.right = TreeNode("72")
+
+    root.right.right = TreeNode("93")
+    root.right.right.left = TreeNode("91")
+    root.right.right.right = TreeNode("99")
 
 
-            <li><p>The provided code defines a method called "print_tree" that receives the root of the node. Your task is to fill out the body of this method so that it prints out every element of the tree in alphabetical order.</p>
+    return root
+
+def print_tree(node):
+    """
+    This functions should use RECURSION to print out all the nodes of the tree IN ORDER.
+    :param node:
+    :return:
+    """
+
+    # TODO: Put your code here
+    pass
+
+def main():
+    """
+    Call functions to construct a tree and print it.
+    :return:
+    """
+
+    # You should not change anything here.
+    root = construct_tree()
+    print_tree(root)
+
+if __name__ == "__main__":
+    main()
+</code></pre>
+
+            <li><p>The provided code defines a method called "print_tree" that receives the root of the node. Your task is to fill out the body of this method so that it prints out every element of the tree in order. (Please note that the tree has been constructed in order, so you should not need to ever compare any values yourself to see which is less and which is greater, rather follow the branches of the tree appropriately, and it will be done for you.)</p>
 
             <p>Your function should be a recursive function that calls itself on each of the child nodes. Don't forget to include a base case to handle the situation when the function is call on an empty "None" node.</p>
 
@@ -172,6 +243,21 @@
         <h4>Sample Output</h4>
 
 <pre><code class="bash">
+8
+12
+16
+26
+34
+43
+46
+50
+56
+59
+72
+83
+91
+93
+99
 </code></pre> 
 
         <h4>Testing your program</h4>
