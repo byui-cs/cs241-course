@@ -46,7 +46,7 @@
         <p>For more details about how to create and use sets, please read the brief section on Sets from <a href="https://docs.python.org/3/tutorial/datastructures.html#sets" target="_blank">the official Python documentation</a>.</p>
 
         <h4>Dictionaries</h4>
-        <p>Dictionaries are also commonly referred to as Tables or Maps. They provide a mapping from a key to a value. For example, consider a dictionary that contained the phone numbers of our friends:</p>
+        <p>Dictionaries are also commonly referred to as Tables or Maps. They provide a mapping from a key to a value. For example, consider a dictionary that contains the phone numbers of our friends:</p>
 
 <pre><code class="Python">
 # The dictionary can be created like so:
@@ -94,14 +94,113 @@ print("The capital of {} is {}".format(state, capital))
         <p>Obviously, we would want to do additional things here, such as check to see that the state existed, before printing it out. And, we may even want to loop through all of the states and print out their capitals. These things and more can all be done with dictionaries. For more details on using dictionaries, please read the brief section on Dictionaries from <a href="https://docs.python.org/3/tutorial/datastructures.html#dictionaries" target="_blank">the official Python documentation</a>.</p>
 
         <h3>Homework Assignment</h3>
-        <p>Use a recursive function to visit each node in a provided tree, and print out the values in order.</p>
+        <p>Write a program to read through a census file and keep track of the number of people in different education levels.</p>
+
+        <p>For this assignment, you will work with the <a href="https://archive.ics.uci.edu/ml/datasets/adult" target="_blank">adult dataset</a> from the UCI data repository. You can download the dataset directly <a href="./census.csv" target="_blank" download>here</a>. It is also available in the CS department Linux system at: <code>/home/cs241/datasets/census.csv</code></p>
+
+        <p>This dataset contains about 32,000 records from the 1994 census. Here is an example of the first few lines:</p>
+
+<pre><code class="bash">
+39, State-gov, 77516, Bachelors, 13, Never-married, Adm-clerical, Not-in-family, White, Male, 2174, 0, 40, United-States, <=50K
+50, Self-emp-not-inc, 83311, Bachelors, 13, Married-civ-spouse, Exec-managerial, Husband, White, Male, 0, 0, 13, United-States, <=50K
+38, Private, 215646, HS-grad, 9, Divorced, Handlers-cleaners, Not-in-family, White, Male, 0, 0, 40, United-States, <=50K
+53, Private, 234721, 11th, 7, Married-civ-spouse, Handlers-cleaners, Husband, Black, Male, 0, 0, 40, United-States, <=50K
+28, Private, 338409, Bachelors, 13, Married-civ-spouse, Prof-specialty, Wife, Black, Female, 0, 0, 40, Cuba, <=50K
+</code></pre>
+
+        <p>The 4th column (at index 3, if you are working with a 0-based index), contains the education level of the user. The possible values for this are:</p>
+
+<pre><code class="bash">
+Preschool
+1st-4th
+5th-6th
+7th-8th
+9th
+10th
+11th
+12th
+HS-grad
+Some-college
+Assoc-voc
+Assoc-acdm
+Bachelors
+Prof-school
+Masters
+Doctorate
+</code></pre>
+
+        <p>Your program should count up the number of records in each of the above categories and then display the totals of each (they do not have to be ordered in a certain manner in your display).</p>
+
+        <p>You should <strong>not</strong> use a separate variable for each one, with an if statement like this:</p>
+<pre><code class="Python">
+# DON'T DO IT LIKE THIS
+
+if level == "Preschool":
+    preschool_count += 1
+elif level == "1st-4th":
+    first_count += 1
+...
+</code></pre>
+
+        <p>Instead, you should use a dictionary to store the values:</p>
 
         <h4>Instructions</h4>
         <p>Follow these steps to guide you through the process:</p>
+        <ol>
+            <li><p>First, download the dataset from the link above. Make sure to save it to the same folder that has your Python program. If you are using PyCharm, you can drag and drop it into the table of contents pane in PyCharm.</p></li>
 
-<pre><code class="Python">
+            <li><p>Create a dictionary to hold the education level counts.</p></li>
+
+            <li><p>Write code that opens a file, reads through it line by line, and then splits the line into separate parts, based on the comma (",").</p></li>
+
+            <li><p>Get the education level of each record from the 4th column (index 3).</p></li>
+
+            <li><p>If the education level is not present in your dictionary, add it with a count of 1. Otherwise, if the education level is already in your dictionary set it to be the old value + 1.</p></li>
+
+            <li><p>After looping through the whole file and counting up each value, loop through each key in the dictionary and print out the key followed by the value associated with that key.</p></li>
+        </ol>
+
+        <h4>Expected Output</h4>
+<pre><code class="bash">
+ 5355 -- Bachelors
+10501 -- HS-grad
+ 1175 -- 11th
+ 1723 -- Masters
+  514 -- 9th
+ 7291 -- Some-college
+ 1067 -- Assoc-acdm
+ 1382 -- Assoc-voc
+  646 -- 7th-8th
+  413 -- Doctorate
+  576 -- Prof-school
+  333 -- 5th-6th
+  933 -- 10th
+  168 -- 1st-4th
+   51 -- Preschool
+  433 -- 12th
 </code></pre>
 
+        <p>Your formatting / ordering does not have to match this exactly.</p>
+
+        <h4>Hints</h4>
+        <p>You can find out if a given key is in a dictionary with code like: (Assuming that <code>friend</code> is the key you want to look for, and <code>phone_numbers</code> is the dictionary.)</p>
+
+<pre><code class="python">
+if friend in phone_numbers:
+    ...
+
+# or to see if it's not there
+if friend not in phone_numbers:
+    ...
+</code></pre>
+            
+            <p>You can get a collection of all the keys of a dictionary with the <code>.keys()</code> function, like: <code>phone_numbers.keys()</code> and then you can loop through them with code like:</p>
+
+<pre><code class="python">
+for friend in phone_numbers.keys():
+    ...
+</code></pre>
+        </ul>
 
         <h4>Testing your program</h4>
         <p>An automated testBed script not available for your program. Instead please manually test your program and ensure that it works correctly.</p>
