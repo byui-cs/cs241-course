@@ -16,36 +16,90 @@
 
         <h2>12 Prepare : Checkpoint A</h2>
 
-
-        <p>To be announced.</p>
-
-<!-- 
-        <h3>Overview</h3>
-        <p>
-            This checkpoint is different than in other weeks. For this checkpoint, you need to complete sections from  the CodeAcademy Python course. Then, report on your progress with this I-Learn quiz.
+        <p>After completing (or <i>while</i> completing) the <a href="./prepare-f17.html" target="_blank">preparation material</a> for this week, complete the following exercise.
         </p>
-       
+
+        <h3>Overview</h3>
+        <p>This checkpoint will help you practice the syntax of List Comprehensions.</p>
+
         <h3>Instructions</h3>
-
-        <p>Refer to the <a href="./prepare.html">preparation material</a> for information on how to get to the interactive tutorial.</p>
-
-        <p>For Checkpoint A, you need to complete the following sections of the "Advanced Topics in Python" unit:</p>
+        <p>Write a program that uses a list comprehensions to generate lists for each of the following:</p>
 
         <ul>
-            <li><p>1. Iterators for Dictionaries</p></li>
-            <li><p>2. keys() and values()</p></li>
-            <li><p>3. The 'in' Operator</p></li>
-            <li><p>4. Building Lists</p></li>
-            <li><p>5. List Comprehension Syntax</p></li>
-            <li><p>6. Now You Try</p></li>
+            <li><p>A list of the first 100 squares of the numbers [0-99] (e.g., 0, 1, 4, 9, 16, 25, ...)</p></li>
+            <li><p>A list of the numbers between 0 and 99, inclusive, that are divisible by 5 or 7 (e.g., 5, 7, 10, 14, 20, 21, ...).</p></li>
+            <li><p>Take a provided list of words and return a list containing only those that have at least 4 letters and that contain the letter 'e'.</p></li>
         </ul>
 
-        <p>Keep in mind that CodeAcademy uses Python 2. The biggest difference you'll see here is that the <code>print</code> statement doesn't use parentheses.</p>
+        <p>To accomplish this, begin with the code found at "<code>/home/cs241/check12a.py</code>". You can copy this to your current directory by typing: <code>cp /home/cs241/check12a.py .</code> (notice the "." at the end.) This code is as follows:</p>
 
-        <h3>Submission</h3>
-        <p>When you have completed each of these exercises, report your progress in the associated I-Learn quiz.</p>
- -->
+<pre><code class="python">
+"""
+File: check12a.py
+Original Author: Brother Burton
+
+Purpose: This file is a starting point to help you practice list comprehensions.
+"""
+
+def get_part1_list():
+    """
+    Returns a list of the squares of the numbers [0-99], e.g., 0, 1, 4, 9, 16, 25 ...]
+    """
+    numbers = [] # TODO: Change this line to be a list comprehension
+
+    return numbers
+
+def get_part2_list():
+    """
+    Returns a list of the the numbers [0-99] that are divisible by either 5 or 7
+    """
+    numbers = [] # TODO: Change this line to be a list comprehension
+
+    return numbers
+
+def get_part3_list():
+    """
+    Filters a list of words to return only those that are at least 4 letters long and contain an 'e'
+    """
+    old_words = ["tacos", "knowledge", "water", "on", "the", "I", "is", "hilarious", "tie", "coat", "white", "covenants", "phone", "rubric", "send", "restrictions"]
+
+    new_words = [] # TODO: Change this line to be a list comprehension
+
+    return new_words
+
+def main():
+    """
+    This function calls the above functions and displays their result.
+    """
+    print(get_part1_list())
+    print(get_part2_list())
+    print(get_part3_list())
+
+
+if __name__ == "__main__":
+    main()
+</code></pre>
+
+        <p>Then, your task is to implement the three functions that produce these lists. You should not need to modify <code>main</code> at all.</p>
+
+        <h3>Testbed</h3>
+        <p>
+            An auto-grading testbed script is provided for you to help evaluate your program. This same testbed script will be used to grade your program. It is pass/fail, so your program must pass the testbed completely for you to receive credit for this assignment. You may run the testbed as many times as you like.
+        </p>
+
+        <p>You must use list comprehensions for this program in order to receive credit.</p>
+
+        <h4>Helpful commands</h4>
+<pre><code class="bash">
+testBed cs241/check12a check12a.py
+submit check12a.py
+</code></pre>
+
         </article>
+
+   <script src="../course/js/highlight/highlight.pack.js"></script>
+   <script>hljs.initHighlightingOnLoad();</script>
+
 
 </body>
 
