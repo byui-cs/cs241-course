@@ -1,9 +1,9 @@
 Your Name:
 
-1. How do you reference the first parameter passed to a shell script?
+1. Why would someone use a shell script instead of writing a Python program?
 
 
-2. What is your least favorite thing about working with Pandas?
+2. Why would someone use a Python program instead of writing a shell script?
 
 
 3. What is the most interesting thing you learned as a part of your work for this class this week?
