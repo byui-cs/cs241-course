@@ -50,6 +50,23 @@
 
         <p>When reading this material, make sure to use the exercises and interactive code blocks to enhance your understanding of the material.</p>
 
+        <h4>Using a Main Function</h4>
+        <p>In many programming languages, the program always starts running at a main function. In Python, your code doesn't actually have to be in a function. The execution starts at the top and proceeds line by line. However, in most cases, convention is that we still create a main function and use that to start our program.</p>
+
+        <p>So in practice, all of your code should be in functions, and then have a main function that is the master-delegater function that drives the rest of the program. Then, to make sure the program starts with main, we typically put this code at the bottom of our program:</p>
+
+<pre><code class="python">
+if __name__ == "__main__":
+    main()
+</code></pre>
+
+        <p>This is a little bit complex, and you'll understand it better when we break our programs into multiple files, but the purpose of this logic is to make sure that your program is the one that the user actually ran, as opposed to your file being included by someone else's program.</p>
+
+        <p>Thus, the translation of this code is essentially, "If my program is the one that is being run directly, please call the main function to get it started."</p>
+
+        <p>If you're still not quite sure about this, it's ok, it will become more clear as we get used to it.</p>
+
+
         <h3>Files</h3>
         <p>There are many different ways to work with file input/output in Python. We will begin by learning how to work with them directly to loop through the contents of the file.</p>
 

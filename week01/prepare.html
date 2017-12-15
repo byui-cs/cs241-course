@@ -39,6 +39,16 @@
         <p>The way you remotely connect to the lab is different depending the type of computer you have. Please refer to the following link for information on configuring your specific system: 
         <a href="https://content.byui.edu/file/7e8609cb-3efc-47c5-937f-4bd44c4e711a/1/index.html" target="_BLANK">Linux Lab Remote Access</a>.
 
+        <div class="tips">
+            <p>Instructor Tip:</p>
+            <p>For those that have used the Linux system previously, please be aware that a few changes have been made recently:</p>
+
+            <p>The IP address range has changed to 157.201.194.201-210 (it was formerly 201-235). If you use emacs with a client that passes through the graphics (e.g., Moba or Mac with the -X switch), it will open up a graphical version of emacs on your local system. This may be what you want, because it allows for use of the mouse, etc. But if you are away from campus, it will likely be very delayed. If you want to force emacs to open in the regular "console" way, you can use the "-nw" switch for "no window", such as: emacs -nw assign01.cpp .</p>
+
+            <p>Because the physical lab systems have changed, if you have previously connected to one of the systems in the 201-210 range, your computer will have remembered its fingerprint in it's known hosts list. Because the fingerprint has now changed, you will get a security warning, and will not be able to connect to it. This can be resolved by removing that line from your known hosts file or by picking a different IP address to which you have not previously connected.</p>            
+        </div>
+
+
         <a name="python"></a>
         <h4>Learn the Basics of Python</h4>
         <p>This semester we will be using the Python programming language. If you have programmed in Python previously, this material will be a review for you. If you have not, it will help you come up to speed.</p>
