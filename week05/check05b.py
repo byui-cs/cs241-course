@@ -25,6 +25,13 @@ class Money:
     def display(self):
         print("${}.{:02d}".format(self.dollars, self.cents))
 
+    def __repr__(self):
+        """
+        This function is called by internal processes like the debugger
+        to get a string representation of the object.
+        """
+        return "Money Object (Dollars: {}, Cents: {})".format(self.dollars, self.cents)
+
 
 def main():
     """
