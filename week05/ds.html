@@ -74,8 +74,10 @@
         <p>Figuring out this problem is a little tricky. Try to think about how a stack might help.</p>
         <p>Because we need to have closing braces occur in the reverse order of the opening ones (think Last-in First-out), one idea is to think about putting opening braces onto a stack when they are encountered, and then when closing braces are encountered you could check to see if they match the brace that's currently on the top of the stack. Of course, you also need to make sure the stack has things in it, and ends with no extra items at the end of the program.</p>
 
+        <p>Take some time to think and work through this problem. These are the kinds of problems you could see on a job interview (although this one is common enough that you likely won't see it, specifically). If you have spent time and worked with others, but are still struggling with ideas of how to approach it, you are welcome to refer to <a href="https://github.com/byui-cs/cs241-course/blob/master/week05/stacks05/braces.py" target="_blank">this pseudocode</a> that a class put together one semester.</p>
+
         <h4>TestBed and Submission</h4>
-        <p>An automated TestBed script is provided for you. It will test your program on 6 different files.</p>
+        <p>An automated TestBed script is provided to help you test your program. It will test your program on 6 different files.</p>
 
 <pre><code class="bash">
 testBed cs241/stacks05 braces.py
@@ -90,6 +92,8 @@ testBed cs241/stacks05 braces.py
             <li><code>stacks05.txt</code> - Not balanced</li>
             <li><code>stacks06.txt</code> - Balanced</li>
         </ul>
+
+        <p>In case it is helpful, these files are also available at <a href="https://github.com/byui-cs/cs241-course/tree/master/week05/stacks05" target="_blank">GitHub</a>.</p>
 
         <p>You will not submit your program for grading, instead take the accompanying I-Learn quiz to report on your progress and your understand of stacks.</p>
 
