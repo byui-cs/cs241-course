@@ -22,7 +22,7 @@
 
         <h3>Instructions</h3>
 
-        <p>Your assignment is to create a game that simulates skeet shooting. On the left side of the screen, clay pigeons, or "targets" are randomly thrown across the screen. On the bottom left corner of the screen, the "marksman" (the term is used very loosely here) aims the rifle. The object of the game is to hit the intended targets, and not the safe ones.</p>
+        <p>Your assignment is to create a game that simulates skeet shooting. On the left side of the screen, clay pigeons, or targets are randomly thrown across the screen. On the bottom left corner of the screen, the "marksman" (the term is used very loosely here) aims the rifle. The object of the game is to hit the intended targets, and not other "safe" ones.</p>
 
         <p>The following shows the game in action:</p>
 
@@ -30,20 +30,20 @@
 
         <h4>Game Rules and Specification</h4>
         <ol>
-            <li><p>Whenever there is no pigeon on the screen, a new one is created with a 1/50 probability.</p></li>
+            <li><p>When there is no pigeon on the screen, a new one is created with a 1/50 probability.</p></li>
             <li><p>To make it more of a challenge, there are three types of pigeons:</p></li>
             <ol>
                 <li><p>Standard Target</p></li>
                 <ul>
                     <li><p>Rendered as a circle with a 20px diameter.</p></li>
                     <li><p>Destroyed with one hit.</p></li>
-                    <li><p>1 Point is awarded for hitting it.</p></li>
+                    <li><p>1 point is awarded for hitting it.</p></li>
                     <li><p>Use the <code>arcade.draw_circle_filled</code> to assist you.</p></li>
                 </ul>
                 <li><p>Strong Target</p></li>
                 <ul>
                     <li><p>Rendered as a circle with a number inside of it.</p></li>
-                    <li><p>The Strong Target should move more slowly than the others as defined below.</p></li>
+                    <li><p>The strong target should move more slowly than the others as defined below.</p></li>
                     <li><p>It takes 3 hits to destroy this target.</p></li>
                     <li><p>1 point is awarded for each of the first two hits.</p></li>
                     <li><p>5 points are awarded for the third hit that destroys the target.</p></li>
@@ -59,11 +59,11 @@
             </ol>
             <li><p>The target type, direction, velocity, and timing to release (delay) are random according to the following constraints:</p></li>
             <ul>
-                <li><p>The initial position of the target is anywhere along the top half of the left side the screen</p></li>
+                <li><p>The initial position of the target is anywhere along the top half of the left side the screen.</p></li>
                 <li><p>The horizontal component of the velocity should be between 1 and 5 pixels/frame.</p></li>
                 <li><p>The vertical component of the velocity should be between -2 and +5 pixels/frame.</p></li>
-                <li><p>To give the user a greater chance to hit the Strong Target, it should move more slowly than the others. In particular, its horizontal velocity should be taken from the range: 1 to 3, and it's vertical velocity from the range -2 to +3.
-                <li><p>New targets should be created in the "update" function with 1/50 probability. This can be achieved by drawing a random number from 1 to 50, and checking if it's 1.</p></li>
+                <li><p>To give the user a greater chance to hit the strong target, it should move more slowly than the others. In particular, its horizontal velocity should be taken from the range: 1 to 3, and it's vertical velocity from the range -2 to +3.
+                <li><p>New targets should be created in the "update" function with 1/50 probability. This can be achieved by drawing a random number from 1 to 50 and checking if it's 1.</p></li>
                 <li><p>There is no limit to the number of targets that can be on the screen at a time, but they should be removed from the game when they leave the screen.</p></li>
             </ul>
             <li><p>Rifle</p></li>
@@ -87,14 +87,14 @@
 
         <p>As before, please recognize that other students in different sections, or different semesters may not be working in this way, so please DO NOT share the code you are receiving.</p>
 
-        <p>For this project the instructor will provide the <code>Rifle</code> class and most of the logic in the <code>Game</code> class. For the game class, you will be provided with the logic of moving the rifle, creating, advancing, and cleaning up bullets, and also checking for collisions.</p>
+        <p>For this project the instructor will provide the <code>Rifle</code> class and most of the logic in the <code>Game</code> class. For the <code>Game</code> class, you will be provided with the logic of moving the rifle, creating, advancing, and cleaning up bullets, and also checking for collisions.</p>
 
         <p>You are responsible to implement the following:</p>
         <ul>
-            <li><p>The Bullet class</p></li>
+            <li><p>The <code>Bullet</code> class</p></li>
             <li><p>Classes for the various types of targets</p></li>
             <li><p>A base class for flying objects</p></li>
-            <li><p>In the game class: creating, storing, drawing and advancing the targets. (Hint: look for the "TODO" comments in the game class)</p></li>
+            <li><p>In the game class: creating, storing, drawing and advancing the targets. (Hint: look for the "TODO" comments in the game class.)</p></li>
         </ul>
 
         <p>Provided you correctly implement the methods and data members for targets and bullets, the collision detection and keeping of the game score will be taken care of for you.</p>
@@ -135,14 +135,14 @@
 
 
         <h4>Getting Started</h4>
-        <p>You will use the same framework and library that you used for Pong, plus the Skeet specific classes from the Instructor's half. You can copy this file from: <a href="https://github.com/byui-burton/cs241p-course/tree/master/week06/skeet.py" target="_BLANK">skeet.py</a>.</p>
+        <p>You will use the same framework and library that you used for Pong, plus the Skeet specific classes from the instructor's half. You can copy this file from: <a href="https://github.com/byui-burton/cs241p-course/tree/master/week06/skeet.py" target="_BLANK">skeet.py</a>.</p>
 
         <h4>Architectural Design</h4>
 <!--         <p>The entire program will need to be implemented using the principles of encapsulation. Thus, you need to think about the different components (classes) that you will need in the game, and their various actions (methods) and properties (member variables). Before you start programing, you will need to produce UML class diagrams for each of the classes you will be using. Please pay special attention to the design of these components, so they can be as general-purpose as possible. You will want to reuse some of them in future projects.</p>
  -->
-        <p>For this project you will be expected to use the principles of inheritance and polymorphism. These are the topics we will be studying over the next two weeks.</p>
+        <p>For this project, you will be expected to use the principles of inheritance and polymorphism. These are the topics we will be studying over the next two weeks.</p>
 
-        <p>In order to demonstrate correct use of these design principles, in your game class, the targets should all be put in the same list and then treated "identically" throughout the game code. In other words, should not have a separate list for each type of target.</p>
+        <p>In order to demonstrate correct use of these design principles, in your game class, the targets should all be put in the same list and then treated "identically" throughout the game code. In other words, it should not have a separate list for each type of target.</p>
 
 <h4>Code hints and suggestions</h4>
         <ul>
@@ -157,7 +157,7 @@ import random
 random.uniform(-2, 2)
 </code></pre>
 
-            <li><p>Trig functions (sin, cos, tan) will likely be helpful in determining the x and y components of an angle. They can be found in the <code>math</code> library and used as follows. (Note that they expect radians rather than degrees, and there are handy functions to convert between them.)</p></li>
+            <li><p>Trig functions (sin, cos, tan) will likely be helpful in determining the x and y components of an angle. They can be found in the <code>math</code> library and used as follows. (Note that these fucntions expect radians rather than degrees, and there are handy functions to convert between them.)</p></li>
 <pre><code class="python">
 import math // used for sin, cos, and M_PI
 ...
@@ -196,7 +196,7 @@ arcade.draw_text(repr(self.lives), text_x, text_y, TARGET_COLOR, font_size=20)
 <p>For simplicity, for this assignment, you are welcome to put all of your classes in the same .py file.</p>
 
         <h4>Expectation to Excel</h4>
-        <p>As explained in more detail in the Project link above, the requirements presented here are simply a base standard. To receive up to 100% on this assignment you are expected to show creativity and excel above and beyond what is specifically required.</p>
+        <p>As explained in more detail in the project link above, the requirements presented here are simply a base standard. To receive up to 100% on this assignment you are expected to show creativity and excel above and beyond what is specifically required.</p>
 
 
         

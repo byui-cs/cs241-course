@@ -35,36 +35,36 @@
         <h3>Major Things to Look For</h3>
         <p>The following should be present for this milestone:</p>
         <ul>
-            <li><p>Point class (likely just an x and y)</p></li>
-            <li><p>Velocity class (likely just a dx and dy)</p></li>
-            <li><p>FlyingObject Base class (or something similar)</p></li>
-            <li><p>Class for a bullet</p></li>
-            <li><p>Class for a target (for this week, only one is required)</p></li>
-            <li><p>Bullets firing in the right direction</p></li>
-            <li><p>A target flying across the screen</p></li>
+            <li><p>Point class (likely just an x and y).</p></li>
+            <li><p>Velocity class (likely just a dx and dy).</p></li>
+            <li><p>FlyingObject Base class (or something similar).</p></li>
+            <li><p>Class for a bullet.</p></li>
+            <li><p>Class for a target (for this week, only one is required).</p></li>
+            <li><p>Bullets firing in the right direction.</p></li>
+            <li><p>A target flying across the screen.</p></li>
         </ul>
 
-        <p>No collisions, scoring, or dying when things leave the screen is necessary at this point</p>
+        <p>No collisions, scoring, or dying when things leave the screen is necessary at this point.</p>
 
         <p>From a design standpoint, we also expect to see:</p>
         <ul>
-            <li><p>Point and velocity should be in the base class, not directly in the bullet or target</p></li>
-            <li><p>Advance and is_off_screen should also be in the base class, not in the bullet or target</p></li>
-            <li><p>Use of the point class for drawing and moving (sometimes, a point is there, but then also add an x and y to the object that are used instead. This is not correct)</p></li>
+            <li><p>Point and velocity should be in the base class, not directly in the bullet or target.</p></li>
+            <li><p>Advance and <code>is_off_screen</code> should also be in the base class, not in the bullet or target.</p></li>
+            <li><p>Use of the point class for drawing and moving. (Sometimes, a point is there, but then also add an x and y to the object that are used instead. This is not correct).</p></li>
             <li><p>Bullet and target classes should each define their own draw functions.</p></li>
             <li><p>Abstract methods may be present in base classes, which is excellent, but we haven't talked about this yet.</p></li>
-            <li><p>Make sure objects inherit from the appropriate base class, and also call super().__init__() in their inits.</p></li>
+            <li><p>Make sure objects inherit from the appropriate base class, and also call <code>super().__init__()</code> in their inits.</p></li>
         </ul>
 
         <h3>Scoring</h3>
         <p>Given the formative nature of this assessment, the scoring is done in broad strokes as follows:</p>
 
         <ul>
-            <li><p>100% - Functionality is there, and the base class is used correctly</p></li>
-            <li><p>90% - Minor issue with functionality or inheritance, such as not putting advance in the base class</p></li>
-            <li><p>75% - Program compiles/runs, but missing major functionality or not using a base class</p></li>
-            <li><p>50% - Some attempt was made and general concepts are started</p></li>
-            <li><p>0% - Nothing submitted</p></li>
+            <li><p>100% - Functionality is there, and the base class is used correctly.</p></li>
+            <li><p>90% - Minor issue with functionality or inheritance, such as not putting advance in the base class.</p></li>
+            <li><p>75% - Program compiles/runs, but is missing major functionality or not using a base class.</p></li>
+            <li><p>50% - Some attempt was made and general concepts are started.</p></li>
+            <li><p>0% - Nothing submitted.</p></li>
         </ul>
 
     </article>

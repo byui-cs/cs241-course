@@ -19,10 +19,10 @@
         <p>This checkpoint is intended to help you practice the syntax of inheritance, specifically, the syntax of calling methods from a base class.</p>
 
 
-        <p>You are to write a program to track cell phones. You determine that there are two types of cell phones, traditional phones that have a phone number, and smart phones, that have a phone number, but also contain an email address.</p>
+        <p>You are to write a program to track cell phones. You determine that there are two types of cell phones: traditional phones that have a phone number, and smart phones that have a phone number but also contain an email address.</p>
 
         <h3>Instructions</h3>
-        <p>Write a class <code>Phone</code> contains a phone number, and then a class <code>SmartPhone</code> that extends the Phone class to add an email address, according to the following:</p>
+        <p>Write a class <code>Phone</code> that contains a phone number, and then a class <code>SmartPhone</code> that extends the <code>Phone</code> class to add an email address according to the following:</p>
 
         <ol>
             <li><p>The <code>Phone</code> class should contain three integers for the different parts of a phone number. Here is its class diagram:</p></li>
@@ -60,9 +60,9 @@
 
             <li><p>The <code>prompt</code> method of the <code>SmartPhone</code> class should call the <code>prompt_number</code> method defined in the base class and then additionally prompt for an email address.</p></li>
 
-            <li><p>The <code>display</code> method of the <code>SmartPhone</code> class should call the <code>display</code> method defined in the base class and then display the email address. (Yes, it must call it, and yes they must both be named display.)</p></li>
-            <li><p>In <code>main</code> function, create a <code>Phone</code> object, call its <code>prompt_number</code> method and then its <code>display</code> method.</p></li>
-            <li><p>After that, also in <code>main</code>, create a <code>SmartPhone</code> object, call its <code>prompt</code> method and then its <code>display</code> method.</p></li>
+            <li><p>The <code>display</code> method of the <code>SmartPhone</code> class should call the <code>display</code> method defined in the base class and then display the email address. (Yes, it must call it, and yes, they must both be named <em>display</em>.)</p></li>
+            <li><p>In <code>main</code> function, create a <code>Phone</code> object, call its <code>prompt_number</code> method, and then its <code>display</code> method.</p></li>
+            <li><p>After that, also in <code>main</code>, create a <code>SmartPhone</code> object, call its <code>prompt</code> method, and then its <code>display</code> method.</p></li>
             <li><p>For simplicity, you may again put all of your classes in the same file.</p></li>
         </ol>
 
@@ -94,9 +94,9 @@ jenny@test.com
         <h3>Automatic Grading Script (TestBed)</h3>
         <p>This assignment is pass/fail. In order to receive credit, it must pass the auto-grading test script (TestBed). You can run this script as many times as you like while you are working on the assignment. The same test script will be run by the instructor for credit, so you should not be surprised at the result.</p>
 
-        <p>In addition, because the point of this exercise is to help you practice the use of inheritance. <strong>You must use inheritance</strong> to receive credit for this assignment.</p>
+        <p>In addition, because the point of this exercise is to help you practice the use of inheritance, <strong>you must use inheritance</strong> to receive credit for this assignment.</p>
 
-        <p>To run the test script, log into the CS Department Linux system and run the <code>testBed</code> command, providing the class and test script to run as well as the Python program to use, for example:</p>
+        <p>To run the test script, log in to the CS Department Linux system and run the <code>testBed</code> command, providing the class and test script to run as well as the Python program to use, for example:</p>
 
 <pre><code class="bash">
 testBed cs241/check06b check06b.py
