@@ -25,28 +25,18 @@
 
         <h3>Preparation Material</h3>
         <p>For this week, please read the following introduction to Polymorphism:</p>
-        <ul><li><p><a href="https://pythonspot.com/en/polymorphism/" target="_blank">https://pythonspot.com/en/polymorphism/</a></p></li></ul>
+        <ul><li><p><a href="https://pythonspot.com/en/polymorphism/" target="_blank">PythonSpot: Polymorphism</a></p></li></ul>
 
         <p>Then, read this more detailed description of how this works in Python:</p>
-        <ul><li><p><a href="http://blog.thedigitalcatonline.com/blog/2014/08/21/python-3-oop-part-4-polymorphism/" target="_blank">http://blog.thedigitalcatonline.com/blog/2014/08/21/python-3-oop-part-4-polymorphism/</a></p></li></ul>
+        <ul><li><p><a href="http://blog.thedigitalcatonline.com/blog/2014/08/21/python-3-oop-part-4-polymorphism/" target="_blank">Python 3 OOP Part 4 - Polymorphism</a></p></li></ul>
 
-
-<!--         <p>For this week, please read the following sections from the textbook, "Python 3 Object-oriented Programming" by Dusty Phillips.</p>
-
-        <ul>
-            <li><p>From Chapter 3, from Multiple Inheritance to the end of the chapter. In my copy this is pp. 68-94.</p></li>
-            <ul>
-                <li><p>The most important part of this reading is the section on Polymorphism. If the multiple inheritance discussion is hard to follow, that's ok, we won't use really be using it.</p></li>
-            </ul>
-        </ul>
- -->
         <h3>Additional Material</h3>
-        <p>Sometimes, we create a base class for the sake of helping to organize and combine common elements of derived classes, and yet, it doesn't make sense to instantiate the base class on it's own. For example, if we were creating classes to model bank accounts, we could imagine having one class for a checking account, and another for a savings account. Because these classes would have things in common, we could imagine creating a base "Account" class. And yet, you can never create a generic account. At the end of the day, you either have a checking account, or a savings account.</p>
+        <p>Sometimes, we create a base class for the sake of helping to organize and combine common elements of derived classes, yet it doesn't make sense to instantiate the base class on its own. For example, if we were creating classes to model bank accounts, we could imagine having one class for a checking account, and another for a savings account. Because these classes would have things in common, we could imagine creating a base "Account" class. And yet, you can never create a generic account. At the end of the day, you either have a checking account or a savings account.</p>
 
         <h4>Abstract Base Classes</h4>
-        <p>A base class that should not be instantiated on its own, but is used to define common elements of derived classes is called an Abstract Base Class.</p>
+        <p>A base class that should not be instantiated on its own, but is used to define common elements of derived classes is called an <em>abstract base class</em>.</p>
 
-        <p>Often with Abstract Base Classes, we can see that all derived classes should implement a common method, but the logic of this method will be different for each derived class. For example, all bank accounts may have a method to calculate fees, but how this is done for savings accounts could be very different for checking accounts. In this case it may be useful to define this method in the base class to show that it's there, but then we would expect each derived class to override it.</p>
+        <p>Often with abstract base classes, we can see that all derived classes should implement a common method, but the logic of this method will be different for each derived class. For example, all bank accounts may have a method to calculate fees, but how this is done for savings accounts could be very different for checking accounts. In this case it may be useful to define this method in the base class to show that it's there, but then we would expect each derived class to override it.</p>
 
         <h4>Abstract Methods</h4>
         <p>For methods that we expect to always be overridden, we can go one step further and <em>force</em> them to be overridden by declaring them as "abstract methods."</p>
@@ -70,7 +60,7 @@ class Account(ABC):
             <p>Please note that "ABC" is the actual name that you will use, it is not just a made up term like "use class x to do thing y." It stands for Abstract Base Class.</p>
         </div>
 
-        <p>Abstract methods are declared in this abstract base class, by using the abstractmethod decorator before the method as follows:</p>
+        <p>Abstract methods are declared in this abstract base class, by using the <code>abstractmethod</code> decorator before the method as follows:</p>
 
 <pre><code class="python">
 from abc import ABC
@@ -86,9 +76,9 @@ class Account(ABC):
         pass
 </code></pre>
 
-        <p>Now, all classes that derive from the Account class must implement the get_fees method.</p>
+        <p>Now, all classes that derive from the <code>Account</code> class must implement the <code>get_fees</code> method.</p>
 
-        <p>As a side note, be aware that, if desired, you can provide a body to the abstract method that could be invoked with the "super().get_fees()" call in a derived class.</p>
+        <p>As a side note, be aware that if desired, you can provide a body to the abstract method that could be invoked with the <code>super().get_fees()</code> call in a derived class.</p>
 
     </article>
 

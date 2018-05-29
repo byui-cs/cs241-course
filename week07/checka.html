@@ -10,7 +10,7 @@
 <body>
 <div id="courseTitle">
     <span class="icon-byui-logo"></span>
-    <h1>Object-oriented Programming and Data Structures | CS 241</h1>
+    <h1>OO Programming and Data Structures | CS 241</h1>
 </div>
     <article>
 
@@ -25,7 +25,7 @@
             This checkpoint is intended to help you practice the syntax of polymorphism.
         </p>
 
-        <p>Consider that you are writing software for a factory that builds cars. You produce Civics, Odysseys, and Ferraris. We will have a base class that has the name of the car:</p>
+        <p>Consider that you are writing software for a factory that builds cars. You produce Civics, Odysseys, and Ferraris. You will have a base class that has the name of the car, as follows:</p>
 
                 <div class="class-diagrams">
                     <table class="table-class-diagram">
@@ -42,10 +42,10 @@
 
         <h3>Instructions</h3>
 
-        <p>For this assignment, because the classes we are going to create are so small and simplistic, and to help you focus on just the elements of inheritance, rather than the mechanics of creating lots of files, you can put all of your classes at the top of the main file, rather than creating separate files like we would for larger, real-world classes.</p>
+        <p>For this assignment, because the classes you are going to create are so small and simplistic, and to help you focus on just the elements of inheritance, rather than the mechanics of creating lots of files, you can put all of your classes at the top of the main file, rather than creating separate files like you would for larger, real-world classes.</p>
 
             <ol>
-                <li><p>Copy the template file /home/cs241/check07a.py to your working directory.</p></li>
+                <li><p>Copy the template file <code>/home/cs241/check07a.py</code> to your working directory.</p></li>
                 <li><p>Create a class for a <code>Car</code> that has the member variables and methods as described above. Notice that the method, <code>get_door_specs()</code> does not print the data to the screen, but rather returns it.
                 </p></li>
 
@@ -60,10 +60,10 @@
                 <li><p>Next create a class <code>Ferrari</code> that inherits from the <code>Car</code> class and overrides the <code>get_door_specs()</code> to return the string "2 butterfly doors". In the constructor, set the <code>name</code> variable to be "Ferrari".
                 </p></li>
 
-                <li><p>A main function is provided that creates one of each of these cars, and passes it to a method called "attach_doors". You need to write this method. It should accept any type of car and display the text: "Attaching doors to Civic - 4 doors" (Of course, replacing "Civic" with the appropriate name, and "4 doors" with the result of calling the <code>get_door_specs()</code> method).
+                <li><p>A main function is provided that creates one of each of these cars, and passes it to a method called "attach_doors". You need to write this method. It should accept any type of car and display the text: "Attaching doors to Civic - 4 doors". (Of course, replace "Civic" with the appropriate name, and "4 doors" with the result of calling the <code>get_door_specs()</code> method.)
                 </p></li>
 
-                <li><p>You must make a single function attachDoors that handles any type of car. You cannot have three separate functions or a single function that takes three parameters.</p></li>
+                <li><p>You must make a single function <code>attach_doors</code> that handles any type of car. You cannot have three separate functions or a single function that takes three parameters.</p></li>
 
 
             </ol>
@@ -81,7 +81,7 @@ Attaching doors to Ferrari - 2 butterfly doors
 
         <h3>Testbed</h3>
         <p>
-            An auto-grading testbed script is provided for you to help evaluate your program. This same testbed script will be used to grade your program. It is pass/fail, so your program must pass the testbed completely for you to receive credit for this assignment. You may run the testbed as many times as you like.
+            An auto-grading testBed script is provided to help you evaluate your program. This same testBed script will be used to grade your program. It is pass/fail, so your program must pass the testbed completely for you to receive credit for this assignment. You may run the testbed as many times as you like.
         </p>
 
         <h4>Helpful commands</h4>

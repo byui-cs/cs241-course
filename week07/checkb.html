@@ -10,22 +10,22 @@
 <body>
 <div id="courseTitle">
     <span class="icon-byui-logo"></span>
-    <h1>Object-oriented Programming and Data Structures | CS 241</h1>
+    <h1>OO Programming and Data Structures | CS 241</h1>
 </div>
     <article>
 
         <h2>07 Prepare : Checkpoint B - Abstract Base Classes</h2>
 
-        <p>Please go back and read over the supplementary reading material on Abstract Base Classes from the <a href="./prepare.html">preparation material</a> for this week. Then, complete the following exercise.
+        <p>Please go back and read over the supplementary reading material on abstract base classes from the <a href="./prepare.html">preparation material</a> for this week. Then, complete the following exercise.
         </p>
 
         <h3>Overview</h3>
         <p>
-            This checkpoint is intended to help you practice the syntax of abstract base classes, and use these principles to have lists of related objects.
+            This Checkpoint is intended to help you practice the syntax of abstract base classes, and use these principles to have lists of related objects.
         </p>
 
 
-        <p>For this checkpoint, you will create an abstract base class for a <code>Shape</code>, and two derived classes for specific shapes. The base class will have an abstract method, <code>get_area()</code> that is overriden by each derived class. You will then create a certain number of new shapes, as specified by the user, put them in the same array, and loop through and display the area of each.
+        <p>For this checkpoint, you will create an abstract base class for a <code>Shape</code>, and two derived classes for specific shapes. The base class will have an abstract method, <code>get_area()</code>, that is overriden by each derived class. You will then create a certain number of new shapes, as specified by the user, put them in the same array, and loop through and display the area of each.
 
         <h3>Instructions</h3>
 
@@ -47,14 +47,14 @@
                     </table>
                 </div>
 
-                <li><p>Add a Circle class that derives from the base Shape class.</p>
+                <li><p>Add a <code>Circle</code> class that derives from the base <code>Shape</code> class.</p>
                 <ul>
                     <li><p>Add an <code>__init__</code> function, and in it, call the super class <code>__init__</code> function, set the <code>name</code> variable to be "Circle", and the radius to be 0.0.</p></li>
                     <li><p>Redefine the <code>get_area()</code> method to return "<code>3.14 * radius * radius</code>".</p></li>
                 </ul>
                 </li>
 
-                <li><p>Add a <code>Rectangle</code> class that also is derived from the Shape class.</p>
+                <li><p>Add a <code>Rectangle</code> class that also is derived from the <code>Shape</code> class.</p>
                 <ul>
                     <li><p>Add an <code>__init__</code> function, and in it, call the super class <code>__init__</code> function, set the <code>name</code> variable to be "Rectangle", and a length and width to each be 0.0.</p></li>
                     <li><p>Redefine the <code>get_area()</code> method to return "<code>length * width</code>".</p></li>
@@ -62,7 +62,7 @@
                 </li>
 
 
-                <li><p>The provided code supplies you with a main function. It takes care of prompting the user for the correct values, and looping through. You need to add the following to main (at the places indicated in the comments):</p>
+                <li><p>The provided code supplies you with a main function. It takes care of prompting the user for the correct values and looping through. You need to add the following to main (at the places indicated in the comments):</p>
                 
                 <ul>
                     <li><p>Declare a new list for your shapes.</p></li>
@@ -97,7 +97,7 @@ Rectangle - 40.00
 
         <h3>Testbed</h3>
         <p>
-            An auto-grading testbed script is provided for you to help evaluate your program. This same testbed script will be used to grade your program. It is pass/fail, so your program must pass the testbed completely for you to receive credit for this assignment. You may run the testbed as many times as you like.
+            An auto-grading testBed script is provided to help you evaluate your program. This same testBed script will be used to grade your program. It is pass/fail, so your program must pass the testBed completely for you to receive credit for this assignment. You may run the testBed as many times as you like.
         </p>
 
         <p>Please note that it is possible to do this assignment without using abstract methods, but this will not help you understand the concept, and you will not receive credit if you do not follow the instructions.

@@ -19,7 +19,7 @@
         </p>
 
         <h3>Overview</h3>
-        <p>BYU-Idaho is having issues with their payroll system and has asked you to create a new one. You quickly recognize that there are two types of employees, hourly employees (those that get paid a certain amount per hour) and salary employees (those that receive an annual salary).</p>
+        <p>BYU-Idaho is having issues with its payroll system and has asked you to create a new one. You quickly recognize that there are two types of employees: hourly employees (those that get paid a certain amount per hour); and salary employees (those that receive an annual salary).</p>
 
         <p>While these two types of employees have differences, they also have a significant amount in common. So you decide to create a common base class with each of these two types as a separate derived class.</p>
 
@@ -41,29 +41,29 @@
 
             <li><p>Create a <code>main</code> function that does the following:</p>
                 <ul>
-                    <li><p>Declare a list for employees.</p></li>
-                    <li><p>Loop until the user enters q and prompt the user for an "h" (hourly employee) or an "s" (salary employee) or "q" to quit.</p></li>
-                    <li><p>Then prompt for the <code>name</code> and the <code>hourlyRate</code>/<code>salary</code></p></li>
-                    <li><p>For each employee entered, create a new employee of the correct type and add it to the list.</p></li>
+                    <li><p>Declares a list for employees.</p></li>
+                    <li><p>Loops until the user enters "q" and prompts the user for an "h" (hourly employee) or an "s" (salary employee) or a "q" to quit.</p></li>
+                    <li><p>Then prompts for the <code>name</code> and the <code>hourlyRate</code>/<code>salary</code>.</p></li>
+                    <li><p>For each employee entered, creates a new employee of the correct type and adds it to the list.</p></li>
                 </ul>
             </li>
 
-            <li><p>After the user enters q, have <code>main</code> loop through the list and call the <code>display</code> method for each employee. Run your program and ensure that it looks correct.</p>
+            <li><p>After the user enters "q", have <code>main</code> loop through the list and call the <code>display</code> method for each employee. Run your program and ensure that it looks correct.</p>
             </li>
         </ol>
 
         <h3>Stretch Challenges</h3>
-        <p> After completing the above steps. Make sure that everyone on the entire team is to this point and understands the material. Then, if you have time, move onto the following stretch challenges.</p>
+        <p> After completing the above steps, make sure that everyone on the entire team is to this point and understands the material. Then, if you have time, move onto the following stretch challenges.</p>
 
         <ol>
-            <li><p>Convert your Employee class to an Abstract Base Class and the display function to be an abstract method.</p></li>
+            <li><p>Convert your <code>Employee</code> class to an abstract base class and the display function to be an abstract method.</p></li>
             <li>
-                <p>Add to your <code>HourlyEmployee</code> a member variable for hours. Then, add an <strong>abstract method</strong> to the employee class for <code>get_paycheck()</code> and override it in the derived classes. For hourly employees, this is calculated as the number of hours multiplied by the hourly rate. For salary employees, this should be the salary divided by 24.</p>
+                <p>Add to your <code>HourlyEmployee</code> a member variable for hours. Then, add an <strong>abstract method</strong> to the employee class for <code>get_paycheck()</code>, and override it in the derived classes. For hourly employees, this is calculated as the number of hours multiplied by the hourly rate. For salary employees, this should be the salary divided by 24.</p>
                 <p>Change your code that prompts for the hourly employee to also prompt for the number of hours.</p>
                 <p>In the loop in <code>main</code> that calls the <code>display</code> function, change it to also call the <code>get_paycheck()</code> function and display the pay check amount.</p>
             </li>
 
-            <li><p>Add a regular function (not a member function of any class), <code>display_employee_data</code> that accepts an employee and calls its <code>display</code> function as well as its <code>get_paycheck()</code> function and displays the value. Then, remove this code from <code>main</code>, and replace it with a call to your new function.</p></li>
+            <li><p>Add a regular function (not a member function of any class), <code>display_employee_data</code>, that accepts an employee and calls its <code>display</code> function as well as its <code>get_paycheck()</code> function and displays the value. Then, remove this code from <code>main</code>, and replace it with a call to your new function.</p></li>
 
         </ol>
 
