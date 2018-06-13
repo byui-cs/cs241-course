@@ -38,7 +38,7 @@
 
             <li><p>Add a property named <code>gpa</code> for the <code>_get_gpa()</code> and <code>_set_gpa(value)</code> functions using the syntax: <code>property(_get_gpa, _set_gpa)</code> in your class.</p></li>
 
-            <li><p>Add a property named <code>letter</code> that calls the <code>_get_letter()</code> and <code>_set_letter(value)</code> functions. This time, specify the property using the <code>@property</code> syntax for the getter and <code>@letter.setter</code> syntax for the setter.</p></li>
+            <li><p>Add a property named <code>letter</code> that calls the <code>_get_letter()</code> and <code>_set_letter(value)</code> functions. This time, specify the property using the <code>@property</code> syntax for the getter and <code>@letter.setter</code> syntax for the setter. (Please note that when you use the <code>@property</code> syntax, you need to change the name of your getter function to be "letter".)</p></li>
 
             <li><p>Change your main function to use these properties instead of calling your functions. In other words, all calls to <code>student.get_gpa()</code> should be replaced with <code>student.gpa</code>. All calls to <code>student.set_gpa(xx)</code> should be replaced with <code>student.gpa = xx</code> and then the same thing for calls to the letter getter and setter.</p></li>
 
