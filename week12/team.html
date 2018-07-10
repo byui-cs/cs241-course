@@ -21,6 +21,24 @@
         <h3>Instructions</h3>
         <p>For today's activity you will work with your team to complete the Pandas tutorial at: <a href="http://synesthesiam.com/posts/an-introduction-to-pandas.html" target="_BLANK">http://synesthesiam.com/posts/an-introduction-to-pandas.html</a></p>
 
+        <p>A few notes about this tutorial. It is a good tutorial that highlights some important elements of the pandas library, but it is using a slightly older version than we are. You will likely notice this in the output of some commands being similar, but slightly different, which is just fine and should not alarm you. Also, you'll see the use of some things like: <code>data.irow(3)</code> which <a href="http://pandas.pydata.org/pandas-docs/version/0.19.2/generated/pandas.DataFrame.irow.html" target="_blank">has been deprecated</a> (i.e., the old way phased out) in favor of <code>data.iloc[3]</code>.</p>
+
+        <p>Also, depending on how your environment is configured, running a plotting command may not display the plot automatically. There are various things you can do such as saving this to a file, etc., but you might consider importing <code>matplotlib.pyplot</code> directly and then calling <code>.show()</code> on it. For example:</p>
+
+<pre><code class="python">
+import matplotlib.pyplot as plt
+
+... other things here ...
+
+
+data.mean_temp.hist()
+
+# if nothing pops up, you can then do:
+plt.show()
+</code></pre>
+
+        <p>As with any programming project, but especially when using libraries, the internet is your friend. If something doesn't quite work the way you expect, you should turn to an internet search to see what others are saying and doing.</p>
+
         <h4>Core Requirements</h4>
 
         <ol>
@@ -41,6 +59,12 @@ import pandas
 data = pandas.read_csv("weather_year.csv")
 data
 </code></pre>
+
+            <div class="tips">
+                <p>Instructor Tip:</p>
+                <p>If you type the above commands directly into the interpreter, you'll see output from the last one ("data"). However, if you run a script with the above code, it will not display anything. because none of those lines produce output. To make the last line print out a summary of the dataset to the console, you'll need to instead have "print(data)".</p>
+                <p>This is because when you run commands directly in the interpreter, it will display the result of the expression automatically, but running a program won't. Hence the difference between just saying "x" to see the value of the variable x, verses having to say "print(x)".</p>
+            </div>
 
             <li><p>Go through each step of the tutorial. Make sure each member of the team stays together on each step.</p>
                 <p>To complete this requirement, you should complete everything up through and including the section "Fun with Columns". This includes getting the histogram to display.</p></li>
