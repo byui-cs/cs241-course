@@ -60,14 +60,25 @@ import os # Used to change the directory to the right place
 
 <pre><code class="python">
 # This line isn't necessary, but it makes it so the later commands (e.g., read_csv)
-# are in a consistent place
-# (You will obviously need to change this to the correct location on _your_ computer.)
+# are in a consistent place (You will obviously need to change this to the correct location on _your_ computer.)
+# If you have put the data files and your Python script in the same folder, you
+# don't need this line.
 os.chdir("/Users/sburton/cs241/nbaData/")
 
 # Load in the data
 # The players data (basketball_players.csv) has the season stats
 players = pd.read_csv("basketball_players.csv")
 </code></pre>
+
+<p>After running the above commands, I received the following message:</p>
+
+<pre><code class="python">
+/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/IPython/core/interactiveshell.py:2705:
+DtypeWarning: Columns (41) have mixed types. Specify dtype option on import or set low_memory=False.
+  interactivity=interactivity, compiler=compiler, result=result)
+</code></pre>
+
+<p>The above error message says that some column data types could not be determined automatically, or seemed to be mixed. We can avoid this by specifying them directly, but in this case, we will ignore it, and move on to look at the data.</p>
 
 <p>With the players dataset loaded, we can play with it to see different things.</p>
 
