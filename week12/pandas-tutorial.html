@@ -460,7 +460,7 @@ print(nba[["year", "useFirst", "lastName", "rebounds", "GP", "reboundsPerGame"]]
 2534   1964     Bill      Russell      1878  78        24.076923
 </code></pre>
 
-<p>This gives us a nice view of the top performers for rebounds per game. As we look at the dataset, we should see if this makes sense. The first thing that should stand out s that Mike Conley is listed has having rebounds in 2007 and 2008 without playing any games. This must clearly be an error in the data. It turns out this kind of thing happens all the time in real datasets, so we always need to be on the lookout for it. If we have the ability, we could talk to the people that produced the data and see if they could fix the problem, but in this case, we don't have that option. So our best choice is probably to remove any rows that don't have games played.</p>
+<p>This gives us a nice view of the top performers for rebounds per game. As we look at the dataset, we should see if this makes sense. The first thing that should stand out is that Mike Conley is listed has having rebounds in 2007 and 2008 without playing any games. This must clearly be an error in the data. It turns out this kind of thing happens all the time in real datasets, so we always need to be on the lookout for it. If we have the ability, we could talk to the people that produced the data and see if they could fix the problem, but in this case, we don't have that option. So our best choice is probably to remove any rows that don't have games played.</p>
 
 <pre><code class="python">
 # Let's just remove any rows with GP=0
