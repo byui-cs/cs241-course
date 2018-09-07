@@ -21,10 +21,10 @@
         <p>You are encouraged with work with others for this checkpoint.</p>
 
         <h3>Overview</h3>
-        <p>After completing (or <i>while</i> completing) the <a href="./prepare.html" target="_blank">preparation material</a> for this week, complete the following exercise.
+        <p>After completing (or <i>while</i> completing) the <a href="./prepare-beta.html" target="_blank">preparation material</a> for this week, complete the following exercise.
         </p>
 
-        <p>For this exercise, you will practice using PyCharm to debug a program. Unlike other checkpoints, you will not submit any code, but rather, will indicate your progress via the quiz in I-Learn.</p>
+        <p>For this exercise, you will practice using Thonny to debug a program. Unlike other checkpoints, you will not submit any code, but rather, will indicate your progress via the quiz in I-Learn.</p>
 
         <p>Please recognize that the purpose of this assignment is to help you learn about a tool that will make your life easier in the coming assignments. You should view it as a tutorial to get you started, not as a series of steps to check off to get credit.</p>
 
@@ -33,44 +33,42 @@
         <h4>Running the file</h4>
         <ol>
 
-            <li><p>Follow the installation instructions from the preparation material to install Python 3, the Arcade library, and PyCharm on your own system.</p></li>
+            <li><p>Follow the installation instructions from the preparation material to install Python 3, the Arcade library, and Thonny on your own system.</p></li>
 
-            <li><p>Create a new Python project in PyCharm. Ensure that it is using at least version 3.</p></li>
+            <li><p>Open Thonny and create a new Python file. Copy and paste the contents of the <a href="https://github.com/byui-cs/cs241-course/blob/master/week05/check05b.py" target="_BLANK">check05b.py starting template</a>. Then save it as a file named, <code>check05b.py</code></p>
 
-            <li><p>Create a new Python file in your project named, check05b.py. Copy and paste the contents of the <a href="https://github.com/byui-burton/cs241p-course/blob/master/week05/check05b.py" target="_BLANK">check05b.py starting template</a>.</p></li>
+                <p>This file contains a simple <code>Money</code> class that holds a dollars and cents, and then a main function that creates some different accounts and alters the balance of them.</p>
+            </li>
 
-            <li><p>Ensure that you can view the files in your project in the "Project Window". You may need to turn this on, via "View -> Tool Windows -> Project" or something similar.</p></li>
+            <li><p>Click the green "play" button on the toolbar to run the current script.</p></li>
 
-            <li><p>Right click the name of your file in the project window and select "Run check05.py".</p></li>
-
-            <li><p>Ensure that you can see the output of the file in an output window.</p></li>
+            <li><p>Ensure that you can see the output of the file in the output window at the bottom of the IDE.</p></li>
 
         </ol>
 
-        <h4>Breakpoints and stepping over code</h4>
+        <h4>Debugging and Stepping over code</h4>
         <ol>
 
-            <li><p>Scroll down to the main function. Find the line where account2 is displayed for the first time. Create a breakpoint on this line by clicking in the left margin. This should show a red circle. A breakpoint will stop the program at that point, and allow you to inspect variables.</p></li>
+            <li><p>Start the debugger by clicking the click the Debug tool bar button (the one that looks like a little "bug"). This starts running the program in a mode where it can run line by line, and you will see the line that is currently running as well as the value of each variable in that function.</p></li>
 
-            <li><p>Run your code again, because you have done this once already, you can simply click the green play button on the tool bar (or look in the "Run" menu). At this point it should <em>not</em> stop at the breakpoint, because you are "running it". Ensure that you still see six dollar amounts in the output.</p></li>
+            <li><p>Once you have started debugging the program, scroll down to the main function. Find the line where <code>account2</code> is displayed for the first time. Put your cursor on this line, and then click "Run to Cursor" from the Run menu. This will run everything in the program up until that line, and then stop there.</p>
+
+            <p>In the local variables of the main function popup, you should see one account listed (account1) because the others haven't been created yet.</p></li>
             
-            <li><p>This time, run your program in debug mode by clicking the icon of the "bug" next to the play button (or look in the "Run" menu). This time it should change the window layout slightly and highlight the line that will display account2. It will also change the output window to a Debugger view. Select the "Console" to see the output. Ensure that you only see one dollar amount now (because the program is stopped at the breakpoint before going on to the second one.</p></li>
-            
-            <li><p>Allow the program to run one more step by clicking the "Step Over" button. You will need to mouse over several of the different arrows to find which icon corresponds to step over. Ensure that the second account is displayed.</p></li>
+            <li><p>Allow the program to run one more step by clicking the "Step Over" button. Ensure that the second account is displayed.</p></li>
 
-            <li><p>Continue clicking the step over button, and watch your program run one step at a time. When you are ready for it to start running normally (to finish the program), click the "Resume Program" button.</p></li>
+            <li><p>Continue clicking the step over button, and watch your program run one step at a time. Notice that when you step over the display function calls, the values are printed to the console of the main window. When you are ready for it to finish main, click the "step out" button which finishes the function, then you can click it once more to step out of that scope and finish the program.</p></li>
 
-            <li><p>Clear your breakpoint, by clicking on it (the red circle should go away).</p></li>
         </ol>
 
         <h4>Stepping into and out of functions</h4>
         <ol>
 
-            <li><p>In the main function, find the line that adds 20 cents to account 1. Put a breakpoint on that line, and debug the program ensuring that it stops at that point.</p></li>
+            <li><p>In the main function, find the line that adds 20 cents to account 1. Start the debugging, put your cursor on that line and run to it.</p></li>
 
-            <li><p>This time, instead of stepping over that line of code, we will step <em>into</em> that function to see what it is doing. Find and click the arrow that corresponds to "Step Into My Code" and click it. The program should now take you to the add_cents method of the Money class.</p></li>
+            <li><p>This time, instead of stepping over that line of code, we will step <em>into</em> that function to see what it is doing. Find and click the arrow that corresponds to "Step Into" and click it. The program should now take you to the add_cents method of the Money class.</p></li>
 
-            <li><p>Click the step over button to step over these lines of code until you are back to the main function again and on to the line where 20 cents are added to account2. Click "Step Into My Code" again to go into the method.</p></li>
+            <li><p>Click the step over button to step over these lines of code until you are back to the main function again and on to the line where 20 cents are added to account2. Click "Step Into" again to go into the method.</p></li>
 
             <li><p>This time, rather than stepping through each line of code to get back to main, find and click the "Step Out" button. This finishes the method and resumes code back in main.</p></li>
 
@@ -81,21 +79,21 @@
         <h4>Inspecting variables</h4>
         <ol>
 
-            <li><p>Once again, set a breakpoint on the line of code in main that will add 20 cents to account1 and debug to this point.</p></li>
+            <li><p>Once again, start the debugger, put your cursor on the the line of code in main that will add 20 cents to account1 and let it run to this point.</p></li>
             
-            <li><p>This time, instead of looking at the "Console" window, look at the "Debugger" window that shows variables.</p></li>
+            <li><p>This time, instead of looking at the "Console" window, notice the variables in the Local variables part of the window for the main function.</p></li>
 
-            <li><p>In the variables window, find the account1 variable, and click the arrow next to it to expand it. This should show the current dollars and cents value.</p></li>
+            <li><p>In the variables window, find the account1 variable, notice the current dollars and cents value. (You might be interested to know that the string that renders in this variable window is defined in the <code>__repr__</code> method of the class.)</p></li>
 
             <li><p>Now step over that line of code and notice the change to the dollar and cents.</p></li>
 
-            <li><p>Next, step into the add_cents method for account2. Notice that the variables window has changed. It should now show two variables "cents" (the parameter) and "self" the current object. Expand out the "self" variable to see its member variables.</p></li>
+            <li><p>Next, step into the add_cents method for account2. Notice that a new window has popped up showing the the variables of this function. Notice that you can now see the representation of the <code>self</code> variable.</p></li>
             
             <li><p>Step over the lines of code to see their effect on the member variables.</p></li>
 
-            <li><p>Repeat this process for adding the 20 cents to account3.</p></li>
+            <li><p>Repeat this process for watching it add 20 cents to account3.</p></li>
 
-            <li><p>Continue playing around with inspecting variables until you feel comfortable with it.</p></li>
+            <li><p>Continue playing around with watching variables until you feel comfortable with it.</p></li>
 
         </ol>
 
