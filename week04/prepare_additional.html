@@ -22,7 +22,7 @@
         
 		<p>In assignment 4, there are 3 classes described:  Product, Order, and Customer.  If three seperate engineers wrote each of these three classes, we might end up with alot of duplicated code.  Perhaps the Order class would have prices and product names as member data.  Perhaps the Customer class would have order numbers and even product names and prices.  If a price changed, we might have to change it in 3 places!  A better design would be to define a relationship between these three classes.  By doing this, we could influence the implementation of the classes by the three engineers without any duplication.  It's possible that we would get a result without identifying the relationships, but the odds are not in our favor as software gets bigger.</p>
 		
-		<p>In the UML diagram below (see discussion below about UML diagrams), we show relationships between 3 simple Product, Order, and Customer classes.  The fliled in diamond means that the class HAS-A (or owns; or is composed of) the other class.</p>
+		<p>In the UML diagram below (see discussion below about UML diagrams), we show relationships between 3 simple Product, Order, and Customer classes.  This UML diagram (and subsequent code) is similair to assignment 4 but it is <strong>not</strong> the same thing.  This is given as a simple example.  The filled in diamond means that the class HAS-A (or owns; or is composed of) the other class.</p>
 		
 		<img src="uml_diagram.jpeg" height="100%" width="100%" alt="UML diagram showing Customer HAS-A Order and Order HAS-A Product.">
 		
