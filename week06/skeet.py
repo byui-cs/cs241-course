@@ -41,7 +41,7 @@ class Rifle:
         self.angle = 45
 
     def draw(self):
-        arcade.draw_rectangle_filled(self.center.x, self.center.y, RIFLE_WIDTH, RIFLE_HEIGHT, RIFLE_COLOR, self.angle)
+        arcade.draw_rectangle_filled(self.center.x, self.center.y, RIFLE_WIDTH, RIFLE_HEIGHT, RIFLE_COLOR, 360-self.angle)
 
 
 class Game(arcade.Window):
